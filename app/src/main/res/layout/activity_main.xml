@@ -7,34 +7,54 @@
     tools:context="fr.enssat.morvan.richinterface.MainActivity">
 
     <LinearLayout
-        android:id="@+id/VideoWrapper"
-        android:layout_width="wrap_content"
+        android:id="@+id/App"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="5">
-
-        <VideoView
-            android:id="@+id/VideoView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="4"/>
+        android:orientation="horizontal"
+        android:weightSum="3">
 
         <LinearLayout
-            android:id="@+id/ChaptersView"
+            android:id="@+id/VideoWrapper"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:weightSum="10">
+
+            <VideoView
+                android:id="@+id/VideoView"
+                android:background="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_weight="2"/>
+
+            <HorizontalScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:id="@+id/ChaptersView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="8">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
 
         </LinearLayout>
 
-    </LinearLayout>
+        <WebView
+            android:id="@+id/WebView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="2"/>
 
-    <WebView
-        android:id="@+id/WebView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"/>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

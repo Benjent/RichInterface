@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         videoView = findViewById(R.id.VideoView);
         webView = findViewById(R.id.WebView);
+        webView.setWebViewClient(new WebViewClient());
         webView.loadUrl(videoMetadata.getTags().get(0).getUrl());
 
         // TODO handle MediaFormat class
@@ -78,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     //final int position = (int)v.getTag();
                     final Tag metaTag = (Tag)v.getTag();
-                    videoView.seekTo(metaTag.getTimeStamp()); // Ensure * 1000
+                    videoView.seekTo(metaTag.getTimeStamp() * 1000); // Ensure * 1000
                     webView.loadUrl(metaTag.getUrl());
                 }
             });

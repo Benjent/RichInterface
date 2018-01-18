@@ -9,42 +9,42 @@
       },
       {
         "label": "New York",
-        "timestamp": 4000,
-        "url": "https://en.wikipedia.org/wiki/jump"
+        "timestamp": 45,
+        "url": "https://en.wikipedia.org/wiki/new_york"
       },
       {
         "label": "The Car",
-        "timestamp": 7800,
-        "url": "https://en.wikipedia.org/wiki/kite"
+        "timestamp": 117,
+        "url": "https://en.wikipedia.org/wiki/car"
       },
       {
         "label": "Breakdown",
-        "timestamp": 15000,
-        "url": "https://en.wikipedia.org/wiki/mouse"
+        "timestamp": 237,
+        "url": "https://en.wikipedia.org/wiki/breakdown"
       },
       {
         "label": "CA/6",
-        "timestamp": 20000,
+        "timestamp": 300,
         "url": "https://en.wikipedia.org/wiki/zappa"
       },
       {
         "label": "Speed Up",
-        "timestamp": 25000,
-        "url": "https://en.wikipedia.org/wiki/mouse"
+        "timestamp": 970,
+        "url": "https://en.wikipedia.org/wiki/speed"
       },
       {
         "label": "New Me",
-        "timestamp": 30000,
+        "timestamp": 1250,
         "url": "https://en.wikipedia.org/wiki/year"
       },
       {
         "label": "Day 11",
-        "timestamp": 39000,
+        "timestamp": 1620,
         "url": "https://en.wikipedia.org/wiki/day"
       },
       {
         "label": "End",
-        "timestamp": 100000,
+        "timestamp": 2100,
         "url": "https://en.wikipedia.org/wiki/end"
       }
     ]
