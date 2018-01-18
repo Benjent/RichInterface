@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     VideoView videoView;
     WebView webView;
+    MapView mapView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,18 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        // Mapview toggler
+        Button button = (Button) findViewById(R.id.MapViewToggler);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(webView.getVisibility() != View.GONE) {
+                    webView.setVisibility(View.GONE);
+                    mapView.setVisibility(View.VISIBLE);
+                }
+
+            }
+        });
+
         // Chapters
         LinearLayout chapters = (LinearLayout)findViewById(R.id.ChaptersView);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
@@ -71,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (Iterator<Tag> i = videoMetadata.getTags().iterator(); i.hasNext();) {
             Tag item = i.next();
-            Button button = new Button(this);
+            button = new Button(this);
             button.setTag(item);
             button.setText(item.getLabel());
             button.setLayoutParams(layoutParams);
@@ -87,19 +100,5 @@ public class MainActivity extends AppCompatActivity {
             chapters.addView(button);
         }
 
-        // ********** TAGS ********** //
-        /*ListView tagListView = (ListView) findViewById(R.id.ChaptersView);
-
-        tagListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Tag tag = videoMetadata.getTags().get(position);
-
-                wikiView.loadUrl(tag.getUrl());
-                videoView.seekTo(tag.getTimeStamp() * 1000);
-            }
-        });*/
-
     }
-
 }

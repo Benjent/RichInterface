@@ -42,6 +42,13 @@
                     android:orientation="horizontal"
                     android:layout_weight="8">
 
+                    <Button
+                        android:id="@+id/MapViewToggler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MAPVIEW"
+                        android:onClick="toggleMapView"/>
+
                 </LinearLayout>
 
             </HorizontalScrollView>
@@ -54,6 +61,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_weight="2"/>
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/MapView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:visibility="GONE"/>
 
     </LinearLayout>
 
