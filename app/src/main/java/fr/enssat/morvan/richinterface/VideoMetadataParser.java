@@ -18,6 +18,9 @@ import java.util.ArrayList;
  * Created by benjent on 11/01/18.
  */
 
+/*
+    Parses the video.json file to retrieve its data.
+ */
 public class VideoMetadataParser {
 
     private Context mContext;
@@ -28,6 +31,7 @@ public class VideoMetadataParser {
 
     public VideoMetadata parse() {
 
+        // Parse json
         VideoMetadata videoMetadata = null;
 
         try {
@@ -51,6 +55,7 @@ public class VideoMetadataParser {
             String videoName = metadata.getString("name");
             String videoUrl = metadata.getString("url");
             JSONArray tags = metadata.getJSONArray("tags");
+            JSONArray waypoints = metadata.getJSONArray("waypoints");
 
             /*for (int i = 0; i < tags.length(); i++) {
                 JSONObject videoMetadataJSON = (JSONObject) tags.get(i);

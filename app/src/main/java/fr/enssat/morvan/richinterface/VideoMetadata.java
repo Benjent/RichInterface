@@ -12,25 +12,36 @@ import java.util.ArrayList;
  * Created by benjent on 11/01/18.
  */
 
+/*
+    Retrieve data from the videoMetadataPerser and streamline it java-style.
+ */
 public class VideoMetadata implements Parcelable {
 
     private String name, url, pageUrl;
     private ArrayList<Tag> tags;
+    private ArrayList<Waypoint> waypoints;
 
     public VideoMetadata(JSONObject videoMetadata) {
-        this.name = null;
-        this.url = null;
-        this.tags = new ArrayList<>();
+        this.name   = null;
+        this.url    = null;
+        this.tags       = new ArrayList<>();
+        this.waypoints  = new ArrayList<>();
 
         try {
             setName(videoMetadata.getString("name"));
             setUrl(videoMetadata.getString("url"));
 
             JSONArray videoTags = videoMetadata.getJSONArray("tags");
+            JSONArray waypoints = videoMetadata.getJSONArray("waypoints");
 
             for (int i = 0; i < videoTags.length(); i++) {
                 JSONObject videoTag = (JSONObject) videoTags.get(i);
                 this.tags.add(new Tag(videoTag.getString("label"), videoTag.getInt("timestamp"), videoTag.getString("url")));
+            }
+
+            for (int i = 0; i < waypoints.length(); i++) {
+                JSONObject waypoint = (JSONObject) waypoints.get(i);
+                this.waypoints.add(new Waypoint(waypoint.getString("label"), waypoint.getInt("timestamp"), waypoint.getLong("lat"), waypoint.getLong("lon")));
             }
 
         } catch (Exception e) {
@@ -39,11 +50,14 @@ public class VideoMetadata implements Parcelable {
 
     }
 
+    // Parcels for data transition
+
     protected VideoMetadata(Parcel in) {
         name = in.readString();
         url = in.readString();
         pageUrl = in.readString();
         tags = in.createTypedArrayList(Tag.CREATOR);
+        waypoints = in.createTypedArrayList(Waypoint.CREATOR);
     }
 
     @Override
@@ -56,6 +70,7 @@ public class VideoMetadata implements Parcelable {
         parcel.writeString(this.getName());
         parcel.writeString(this.getUrl());
         parcel.writeTypedList(this.getTags());
+        parcel.writeTypedList(this.getWaypoints());
     }
 
     public static final Creator<VideoMetadata> CREATOR = new Creator<VideoMetadata>() {
@@ -93,4 +108,11 @@ public class VideoMetadata implements Parcelable {
         this.pageUrl = pageUrl;
     }
     public String getPageUrl() { return this.pageUrl; }
+
+    public ArrayList<Waypoint> getWaypoints() {
+        return waypoints;
+    }
+    public void addWaypoint(Waypoint waypoint) {
+        this.waypoints.add(waypoint);
+    }
 }

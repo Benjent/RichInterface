@@ -7,6 +7,10 @@ import android.os.Parcelable;
  * Created by benjent on 11/01/18.
  */
 
+/*
+  The tag is basically a chapter with a relevant URL for the web view,
+  a timestamp for the video and a label.
+ */
 public class Tag implements Parcelable {
 
     String label, url;
@@ -44,6 +48,8 @@ public class Tag implements Parcelable {
     public void setUrl(String url) {
         this.url = url;
     }
+
+    // Parcels for data transition
 
     @Override
     public int describeContents() {

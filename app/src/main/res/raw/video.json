@@ -1,51 +1,101 @@
 {
-    "name": "Route 66 - An American (Bad) Dream",
-    "url": "https://ia801406.us.archive.org/32/items/Route_66_-_an_American_badDream/Route_66_-_an_American_badDream_512kb.mp4",
-    "tags": [
-      {
-        "label": "Intro",
-        "timestamp": 0,
-        "url": "http://www.imdb.com/title/tt0419100/"
-      },
-      {
-        "label": "New York",
-        "timestamp": 45,
-        "url": "https://en.wikipedia.org/wiki/new_york"
-      },
-      {
-        "label": "The Car",
-        "timestamp": 117,
-        "url": "https://en.wikipedia.org/wiki/car"
-      },
-      {
-        "label": "Breakdown",
-        "timestamp": 237,
-        "url": "https://en.wikipedia.org/wiki/breakdown"
-      },
-      {
-        "label": "CA/6",
-        "timestamp": 300,
-        "url": "https://en.wikipedia.org/wiki/zappa"
-      },
-      {
-        "label": "Speed Up",
-        "timestamp": 970,
-        "url": "https://en.wikipedia.org/wiki/speed"
-      },
-      {
-        "label": "New Me",
-        "timestamp": 1250,
-        "url": "https://en.wikipedia.org/wiki/year"
-      },
-      {
-        "label": "Day 11",
-        "timestamp": 1620,
-        "url": "https://en.wikipedia.org/wiki/day"
-      },
-      {
-        "label": "End",
-        "timestamp": 2100,
-        "url": "https://en.wikipedia.org/wiki/end"
-      }
-    ]
+  "name": "Route 66 - An American (Bad) Dream",
+  "url": "https://ia801406.us.archive.org/32/items/Route_66_-_an_American_badDream/Route_66_-_an_American_badDream_512kb.mp4",
+  "tags": [
+    {
+      "label": "Intro",
+      "timestamp": 0,
+      "url": "http://www.imdb.com/title/tt0419100/"
+    },
+    {
+      "label": "New York",
+      "timestamp": 45,
+      "url": "https://en.wikipedia.org/wiki/new_york"
+    },
+    {
+      "label": "The Car",
+      "timestamp": 117,
+      "url": "https://en.wikipedia.org/wiki/car"
+    },
+    {
+      "label": "Breakdown",
+      "timestamp": 237,
+      "url": "https://en.wikipedia.org/wiki/breakdown"
+    },
+    {
+      "label": "CA/6",
+      "timestamp": 300,
+      "url": "https://en.wikipedia.org/wiki/zappa"
+    },
+    {
+      "label": "Speed Up",
+      "timestamp": 970,
+      "url": "https://en.wikipedia.org/wiki/speed"
+    },
+    {
+      "label": "New Me",
+      "timestamp": 1250,
+      "url": "https://en.wikipedia.org/wiki/year"
+    },
+    {
+      "label": "Day 11",
+      "timestamp": 1620,
+      "url": "https://en.wikipedia.org/wiki/day"
+    },
+    {
+      "label": "End",
+      "timestamp": 2100,
+      "url": "https://en.wikipedia.org/wiki/end"
+    }
+  ],
+  "waypoints":[
+    {
+      "lat":"32.42",
+      "lon":"-90.13",
+      "label":"Ridgeland",
+      "timestamp":"45"
+    },
+    {
+      "lat":"38.90",
+      "lon":"-77.04",
+      "label":"Washington DC",
+      "timestamp":"300"
+    },
+    {
+      "lat":"40.73",
+      "lon":"-73.93",
+      "label":"New York",
+      "timestamp":"1940"
+    },
+    {
+      "lat":"41.88",
+      "lon":"-87.63",
+      "label":"Chicago",
+      "timestamp":"3250"
+    },
+    {
+      "lat":"35.22",
+      "lon":"-101.83",
+      "label":"Amarillo",
+      "timestamp":"3750"
+    },
+    {
+      "lat":"36.17",
+      "lon":"-115.14",
+      "label":"Las Vegas",
+      "timestamp":"5210"
+    },
+    {
+      "lat":"34.09",
+      "lon":"-118.33",
+      "label":"Hollywood",
+      "timestamp":"5780"
+    },
+    {
+      "lat":"32.72",
+      "lon":"-117.16",
+      "label":"San Diego",
+      "timestamp":"5780"
+    }
+  ]
 }
